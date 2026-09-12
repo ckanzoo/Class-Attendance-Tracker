@@ -9,7 +9,7 @@
  * your class data safe are the Firestore security rules (see README section 5).
  */
 import { initializeApp, type FirebaseApp } from 'firebase/app';
-import { getAuth, type Auth } from 'firebase/auth';
+import { initializeAuth, indexedDBLocalPersistence, type Auth } from 'firebase/auth';
 import { getFirestore, type Firestore } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -41,10 +41,11 @@ const app: FirebaseApp = initializeApp(firebaseConfig);
 export const db: Firestore = getFirestore(app);
 
 /**
- * Firebase Authentication. Persistence defaults to local storage on the web and
- * to the keychain inside the iOS web view, so a signed-in user stays signed in
- * after the app is closed and reopened.
+ * Firebase Authentication. Configured with explicit IndexedDB persistence
+ * to prevent cross-tab iframe timeout freezes in Capacitor iOS WebViews.
  */
-export const auth: Auth = getAuth(app);
+export const auth: Auth = initializeAuth(app, {
+  persistence: indexedDBLocalPersistence,
+});
 
 export default app;
