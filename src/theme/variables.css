@@ -1,17 +1,11 @@
 /**
- * Class Trackerbonia design system.
+ * P.A.S.O.K. — Portal for Attendance, Student Overview, and Kinetics design system.
  *
- * Dark-first, monochromatic graphite with a restrained teal accent. Structure is
- * carried by 1px borders and spacing rather than shadows, so the interface reads
- * as a professional admin tool rather than a stack of floating cards.
- *
- * Status colours are reserved (present / absent / late / excused). They tint an
- * icon, a badge and a number - never a whole surface - and every place they are
- * used also carries a text label, so hue is never the only cue.
+ * MinSU Theme: Forest Green (#0b6623) & Golden Yellow (#f4c430) accent palette.
  */
 
 /* ---------------------------------------------------------------------- */
-/* Dark palette - the designed default                                     */
+/* Dark palette - default                                                 */
 /* ---------------------------------------------------------------------- */
 
 :root {
@@ -28,11 +22,12 @@
   --ct-text-2: #8d99a8;
   --ct-text-3: #5f6b78;
 
-  /* Brand */
-  --ct-accent: #19b5a5;
-  --ct-accent-2: #2dd4bf;
-  --ct-accent-soft: rgba(25, 181, 165, 0.12);
-  --ct-accent-line: rgba(25, 181, 165, 0.32);
+  /* Brand - MinSU Forest Green & Gold */
+  --ct-accent: #15803d;
+  --ct-accent-2: #22c55e;
+  --ct-accent-gold: #f4c430;
+  --ct-accent-soft: rgba(21, 128, 61, 0.18);
+  --ct-accent-line: rgba(21, 128, 61, 0.45);
 
   /* Reserved status palette */
   --ct-present: #22c55e;
@@ -54,7 +49,7 @@
   --ct-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   --ct-shadow-lift: 0 8px 24px rgba(0, 0, 0, 0.45);
 
-  /* Ionic bindings */
+  /* Ionic bindings - MinSU Green */
   --ion-background-color: #0b0f14;
   --ion-background-color-rgb: 11, 15, 20;
   --ion-text-color: #f5f7fa;
@@ -64,12 +59,18 @@
   --ion-card-background: #151b23;
   --ion-border-color: #27313d;
 
-  --ion-color-primary: #19b5a5;
-  --ion-color-primary-rgb: 25, 181, 165;
-  --ion-color-primary-contrast: #04120f;
-  --ion-color-primary-contrast-rgb: 4, 18, 15;
-  --ion-color-primary-shade: #15a093;
-  --ion-color-primary-tint: #2dd4bf;
+  --ion-color-primary: #15803d;
+  --ion-color-primary-rgb: 21, 128, 61;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #116731;
+  --ion-color-primary-tint: #22c55e;
+
+  --ion-color-secondary: #f4c430;
+  --ion-color-secondary-rgb: 244, 196, 48;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-shade: #d7ac2a;
+  --ion-color-secondary-tint: #f5ca45;
 
   --ion-color-success: #22c55e;
   --ion-color-success-rgb: 34, 197, 94;
@@ -80,13 +81,12 @@
   --ion-color-medium: #8d99a8;
   --ion-color-medium-rgb: 141, 153, 168;
 
-  /* iOS system face first; Inter is used when the device has it. */
   --ion-font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', Inter,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 /* ---------------------------------------------------------------------- */
-/* Light palette - the same system, inverted with care                     */
+/* Light palette                                                          */
 /* ---------------------------------------------------------------------- */
 
 :root:not(.ion-palette-dark) {
@@ -101,11 +101,11 @@
   --ct-text-2: #5f6b78;
   --ct-text-3: #8d99a8;
 
-  /* A darker teal keeps contrast on white. */
-  --ct-accent: #0f9488;
-  --ct-accent-2: #12a394;
-  --ct-accent-soft: rgba(15, 148, 136, 0.1);
-  --ct-accent-line: rgba(15, 148, 136, 0.28);
+  --ct-accent: #0b6623;
+  --ct-accent-2: #15803d;
+  --ct-accent-gold: #c69214;
+  --ct-accent-soft: rgba(11, 102, 35, 0.12);
+  --ct-accent-line: rgba(11, 102, 35, 0.32);
 
   --ct-present: #15803d;
   --ct-present-soft: rgba(21, 128, 61, 0.1);
@@ -128,12 +128,18 @@
   --ion-card-background: #ffffff;
   --ion-border-color: #dde3ea;
 
-  --ion-color-primary: #0f9488;
-  --ion-color-primary-rgb: 15, 148, 136;
+  --ion-color-primary: #0b6623;
+  --ion-color-primary-rgb: 11, 102, 35;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #0d8279;
-  --ion-color-primary-tint: #12a394;
+  --ion-color-primary-shade: #09521c;
+  --ion-color-primary-tint: #15803d;
+
+  --ion-color-secondary: #f4c430;
+  --ion-color-secondary-rgb: 244, 196, 48;
+  --ion-color-secondary-contrast: #000000;
+  --ion-color-secondary-shade: #d7ac2a;
+  --ion-color-secondary-tint: #f5ca45;
 
   --ion-color-success: #15803d;
   --ion-color-success-rgb: 21, 128, 61;
@@ -143,12 +149,6 @@
   --ion-color-danger-rgb: 185, 28, 28;
 }
 
-/**
- * Ionic's dark palette sets the page surfaces on `body` with a selector that
- * outranks `:root`, which left the page plane pure black while our toolbars used
- * #0B0F14. These re-declare the same tokens at matching specificity so the whole
- * app sits on one surface.
- */
 .ion-palette-dark.ios body,
 .ion-palette-dark.md body,
 .ion-palette-dark body {
@@ -164,7 +164,7 @@
 }
 
 /* ---------------------------------------------------------------------- */
-/* Page chrome                                                             */
+/* Page chrome                                                            */
 /* ---------------------------------------------------------------------- */
 
 ion-content {
@@ -210,7 +210,7 @@ ion-modal {
 }
 
 /* ---------------------------------------------------------------------- */
-/* Typography helpers                                                      */
+/* Typography helpers                                                     */
 /* ---------------------------------------------------------------------- */
 
 .ct-eyebrow {
@@ -235,14 +235,14 @@ ion-modal {
 }
 
 /* ---------------------------------------------------------------------- */
-/* Controls                                                                */
+/* Controls                                                               */
 /* ---------------------------------------------------------------------- */
 
 .ct-button-primary {
   --background: var(--ct-accent);
   --background-activated: var(--ct-accent-2);
   --background-focused: var(--ct-accent-2);
-  --color: var(--ion-color-primary-contrast);
+  --color: #ffffff;
   --border-radius: var(--ct-r-md);
   --box-shadow: none;
   --padding-top: 18px;
@@ -271,7 +271,6 @@ ion-modal {
   margin: 0;
 }
 
-/* Segmented control used for status pickers and filters */
 .ct-segment {
   --background: var(--ct-bg-2);
   border: 1px solid var(--ct-border);
@@ -296,7 +295,6 @@ ion-modal {
   text-transform: none;
 }
 
-/* Form fields inside grouped lists */
 .ct-field-list {
   margin: 0;
   padding: 0;
@@ -329,7 +327,6 @@ ion-modal {
   color: var(--ct-text-2) !important;
 }
 
-/* Toast + alerts sit on the elevated surface */
 .ct-toast {
   --background: var(--ct-elevated);
   --color: var(--ct-text);
@@ -344,7 +341,7 @@ ion-modal {
 }
 
 /* ---------------------------------------------------------------------- */
-/* Status badges - colour always paired with a label                       */
+/* Status badges                                                          */
 /* ---------------------------------------------------------------------- */
 
 .ct-status {
@@ -391,7 +388,7 @@ ion-modal {
 }
 
 /* ---------------------------------------------------------------------- */
-/* Progress meter                                                          */
+/* Progress meter                                                         */
 /* ---------------------------------------------------------------------- */
 
 .ct-meter {
@@ -419,7 +416,7 @@ ion-modal {
 }
 
 /* ---------------------------------------------------------------------- */
-/* Motion - subtle, and off entirely when the system asks                  */
+/* Motion                                                                 */
 /* ---------------------------------------------------------------------- */
 
 @keyframes ct-fade-in {

@@ -8,8 +8,17 @@
         </button>
 
         <header class="head ct-enter">
-          <h1 class="head__title">Welcome Back</h1>
-          <p class="head__brand">Class Trackerbonia</p>
+          <!-- MinSU Header Lockup -->
+          <div class="institution">
+            <img src="@/assets/minsu-logo.png" alt="MinSU Logo" class="school-logo" />
+            <div class="institution__text">
+              <span class="institution__title">Mindoro State University</span>
+              <span class="institution__sub">Main Campus</span>
+            </div>
+          </div>
+
+          <h1 class="head__brand">P.A.S.O.K.</h1>
+          <p class="head__subtitle">Portal for Attendance, Student Overview, and Kinetics</p>
           <p class="head__copy">Sign in to continue to your dashboard.</p>
         </header>
 
@@ -146,7 +155,6 @@ async function submit(): Promise<void> {
   try {
     const profile = await login(email.value, password.value);
     await showToast(`Signed in as ${profile.fullName}.`);
-    // Both roles land on the dashboard; the dashboard itself is role-aware.
     router.replace('/tabs/home');
   } catch (err) {
     error.value = messageOf(err, 'Could not sign you in. Please try again.');
@@ -203,35 +211,73 @@ async function forgotPassword(): Promise<void> {
   font-size: 18px;
 }
 
-.head {
-  margin-top: 20px;
+/* Institution header with seal */
+.institution {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
 }
 
-.head__title {
-  margin: 0;
-  font-size: 30px;
-  font-weight: 800;
-  letter-spacing: -0.035em;
+.school-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+}
+
+.institution__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.institution__title {
+  font-size: 14px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
   color: var(--ct-text);
+  text-transform: uppercase;
+  line-height: 1.25;
+}
+
+.institution__sub {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ct-accent-2);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.head {
+  margin-top: 14px;
 }
 
 .head__brand {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 850;
+  letter-spacing: 0.03em;
+  color: var(--ct-accent-2);
+  line-height: 1.05;
+}
+
+.head__subtitle {
   margin: 6px 0 0;
   font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--ct-accent);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ct-text-2);
 }
 
 .head__copy {
   margin: 12px 0 0;
   font-size: 14px;
-  color: var(--ct-text-2);
+  color: var(--ct-text-3);
 }
 
 .form {
-  margin-top: 28px;
+  margin-top: 24px;
 }
 
 .field--invalid {
