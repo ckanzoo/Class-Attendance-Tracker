@@ -45,7 +45,7 @@ export class AppError extends Error {
 function toFriendlyError(error: unknown, fallback: string): AppError {
   if (error instanceof AppError) return error;
 
-  console.error('[Class Trackerbonia] Firestore error:', error);
+  console.error('[P.A.S.O.K.] Firestore error:', error);
 
   const code = (error as { code?: string })?.code ?? '';
   switch (code) {

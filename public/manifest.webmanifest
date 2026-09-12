@@ -1,7 +1,7 @@
 {
-  "name": "Class Trackerbonia",
+  "name": "P.A.S.O.K.",
   "short_name": "Trackerbonia",
-  "description": "Smart Class Attendance Tracker",
+  "description": "Portal for Attendance, Student Overview, and Kinetics",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

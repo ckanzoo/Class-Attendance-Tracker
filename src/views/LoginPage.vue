@@ -13,7 +13,7 @@
             <img src="@/assets/minsu-logo.png" alt="MinSU Logo" class="school-logo" />
             <div class="institution__text">
               <span class="institution__title">Mindoro State University</span>
-              <span class="institution__sub">Main Campus</span>
+              <span class="institution__sub">CALAPAN CAMPUS</span>
             </div>
           </div>
 

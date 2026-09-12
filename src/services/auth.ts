@@ -29,7 +29,7 @@ const USERS = 'users';
 function toFriendlyAuthError(error: unknown, fallback: string): AppError {
   if (error instanceof AppError) return error;
 
-  console.error('[Class Trackerbonia] Auth error:', error);
+  console.error('[P.A.S.O.K.] Auth error:', error);
 
   const code = (error as { code?: string })?.code ?? '';
   switch (code) {
@@ -219,7 +219,7 @@ export async function signupStudent(input: SignupInput): Promise<UserProfile> {
      */
     await deleteUser(user).catch(() => signOut(auth).catch(() => undefined));
     console.error(
-      '[Class Trackerbonia] Sign-up failed after creating student',
+      '[P.A.S.O.K.] Sign-up failed after creating student',
       student.studentId,
       '- an admin may need to remove that entry.'
     );

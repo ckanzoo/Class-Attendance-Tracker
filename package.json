@@ -2,7 +2,7 @@
   "name": "class-trackerbonia",
   "version": "1.0.0",
   "private": true,
-  "description": "Class Trackerbonia - Smart Class Attendance Tracker (Ionic + Vue 3 + Firebase)",
+  "description": "P.A.S.O.K. - Portal for Attendance, Student Overview, and Kinetics (Ionic + Vue 3 + Firebase)",
   "type": "module",
   "scripts": {
     "dev": "vite",

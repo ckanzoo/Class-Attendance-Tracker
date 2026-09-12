@@ -16,7 +16,7 @@ so on a Mac it is about four commands.
 | `ios/` native project | created (`npx cap add ios`) |
 | Web build copied in | `dist/` → `ios/App/App/public` |
 | Bundle identifier | `com.classtrack.attendance` |
-| Display name | `Class Trackerbonia` |
+| Display name | `P.A.S.O.K.` |
 | App icon (1024, opaque, no alpha) | installed in `Assets.xcassets/AppIcon` |
 | Launch screen | dark `#0B0F14` with the app mark, so it does not flash white |
 

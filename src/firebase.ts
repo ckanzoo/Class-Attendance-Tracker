@@ -32,7 +32,7 @@ export const isFirebaseConfigured: boolean = Boolean(
 if (!isFirebaseConfigured) {
   // Developer-facing warning only. Users never see raw Firebase errors.
   console.warn(
-    '[Class Trackerbonia] Firebase is not configured. Fill in firebaseConfig in src/firebase.ts.'
+    '[P.A.S.O.K.] Firebase is not configured. Fill in firebaseConfig in src/firebase.ts.'
   );
 }
 

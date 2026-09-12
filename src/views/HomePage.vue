@@ -2,7 +2,7 @@
   <IonPage>
     <IonHeader>
       <IonToolbar>
-        <IonTitle>Class Trackerbonia</IonTitle>
+        <IonTitle>P.A.S.O.K.</IonTitle>
         <IonButtons slot="end">
           <IonButton router-link="/tabs/settings" aria-label="Settings">
             <IonIcon slot="icon-only" :icon="settingsOutline" />
@@ -14,7 +14,7 @@
     <IonContent :fullscreen="true">
       <IonHeader collapse="condense">
         <IonToolbar>
-          <IonTitle size="large">Class Trackerbonia</IonTitle>
+          <IonTitle size="large">P.A.S.O.K.</IonTitle>
         </IonToolbar>
       </IonHeader>
 
@@ -22,7 +22,7 @@
         <IonRefresherContent />
       </IonRefresher>
 
-      <p class="subtitle">Smart Class Attendance Tracker</p>
+      <p class="subtitle">Portal for Attendance, Student Overview, and Kinetics</p>
 
       <ConnectionNotice @retry="load" />
 

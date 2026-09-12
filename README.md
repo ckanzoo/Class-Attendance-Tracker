@@ -1,4 +1,4 @@
-# Class Trackerbonia — Smart Class Attendance Tracker
+# P.A.S.O.K. — Portal for Attendance, Student Overview, and Kinetics
 
 An iPhone-first class attendance tracker for teachers, built with **Ionic Framework + Vue 3 +
 TypeScript + Firebase Firestore + Capacitor**, ready to open in **Xcode** and run on a real iPhone.
@@ -96,13 +96,13 @@ The Firebase web config lives directly in [`src/firebase.ts`](src/firebase.ts).
 **Step 1 — Create the project**
 
 1. Go to <https://console.firebase.google.com> and click **Add project**.
-2. Name it `Class Trackerbonia` (any name works). Google Analytics is optional — you can turn it off.
+2. Name it `P.A.S.O.K.` (any name works). Google Analytics is optional — you can turn it off.
 3. Wait for the project to be created, then click **Continue**.
 
 **Step 2 — Register a Web app**
 
 1. On the project overview page, click the **Web** icon (`</>`).
-2. App nickname: `Class Trackerbonia Web`. Do **not** tick "Firebase Hosting" (not needed).
+2. App nickname: `P.A.S.O.K. Web`. Do **not** tick "Firebase Hosting" (not needed).
 3. Click **Register app**. Firebase shows you a `firebaseConfig` object.
 
 **Step 3 — Paste it into `src/firebase.ts`**
@@ -417,7 +417,7 @@ npx cap open ios
 
 ```ts
 appId: 'com.classtrack.attendance',
-appName: 'Class Trackerbonia',
+appName: 'P.A.S.O.K.',
 webDir: 'dist',
 ```
 
@@ -453,7 +453,7 @@ try again.
 **iOS 14.0 or newer**; leave the default unless you have a reason to change it. It must not be
 higher than the iOS version on your test iPhone.
 
-**App name** — *General* tab → **Display Name**: `Class Trackerbonia`. This is the name under the icon on the
+**App name** — *General* tab → **Display Name**: `P.A.S.O.K.`. This is the name under the icon on the
 home screen. (You can also edit `CFBundleDisplayName` in `ios/App/App/Info.plist`.)
 
 **Version and build** — *General* tab → **Version** `1.0`, **Build** `1`. Increase the build number
@@ -468,7 +468,7 @@ landscape options if you want the app locked to portrait, which suits this layou
 
 **Does this app need `GoogleService-Info.plist`? No — and here is why.**
 
-Class Trackerbonia uses the **Firebase JavaScript (Web) SDK** inside the Capacitor web view. All Firestore
+P.A.S.O.K. uses the **Firebase JavaScript (Web) SDK** inside the Capacitor web view. All Firestore
 traffic goes through the web SDK using the config in `src/firebase.ts`, which is compiled into the
 JS bundle at build time. The native `GoogleService-Info.plist` is only read by the **native** Firebase
 iOS SDK, which this app does not use. Your iPhone build will talk to Firestore correctly with no
@@ -513,7 +513,7 @@ Notes:
   TestFlight and the App Store.
 - Your iPhone needs an internet connection — Firestore is a cloud database.
 - To debug the web layer running on the phone: Safari on the Mac → **Develop → [your iPhone] →
-  Class Trackerbonia**. That gives you the full console and inspector. (Enable Safari → Settings → Advanced →
+  P.A.S.O.K.**. That gives you the full console and inspector. (Enable Safari → Settings → Advanced →
   *Show features for web developers* first.)
 
 ---
@@ -582,7 +582,7 @@ Release build for the App Store (Mac): `npm run build && npx cap sync ios`, then
 ## 15. Project structure
 
 ```text
-Class Trackerbonia/
+P.A.S.O.K./
 │
 ├── src/
 │   ├── components/

@@ -13,7 +13,7 @@
         </IonToolbar>
       </IonHeader>
 
-      <SectionHeader title="Account" subtitle="Signed in to Class Trackerbonia" />
+      <SectionHeader title="Account" subtitle="Signed in to P.A.S.O.K." />
 
       <IonList class="group">
         <IonItem>
@@ -84,8 +84,8 @@
       <IonList class="group">
         <IonItem>
           <IonLabel>
-            <h3>Class Trackerbonia</h3>
-            <p>Smart Class Attendance Tracker</p>
+            <h3>P.A.S.O.K.</h3>
+            <p>Portal for Attendance, Student Overview, and Kinetics</p>
           </IonLabel>
         </IonItem>
         <IonItem>
@@ -156,7 +156,7 @@ const { showToast, showError, confirm } = useFeedback();
 
 async function confirmLogout(): Promise<void> {
   const ok = await confirm({
-    header: 'Log out of Class Trackerbonia?',
+    header: 'Log out of P.A.S.O.K.?',
     message: 'You will need to sign in again to record or view attendance.',
     confirmText: 'Log Out',
     destructive: true,

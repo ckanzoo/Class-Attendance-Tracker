@@ -9,7 +9,7 @@
 
         <header class="head ct-enter">
           <h1 class="head__title">Create Your Account</h1>
-          <p class="head__copy">Create your Class Trackerbonia student account.</p>
+          <p class="head__copy">Create your P.A.S.O.K. student account.</p>
         </header>
 
         <!--

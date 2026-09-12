@@ -1,7 +1,7 @@
 rules_version = '2';
 
 /**
- * Class Trackerbonia security rules.
+ * P.A.S.O.K. security rules.
  *
  * The app hides buttons a student should not press, but that is cosmetic - a
  * student can call Firestore directly. These rules are the real enforcement:

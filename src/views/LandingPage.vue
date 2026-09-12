@@ -13,7 +13,7 @@
             <span class="hero__title-accent">Trackerbonia</span>
           </h1>
 
-          <p class="hero__tagline">Smart Class Attendance Tracker</p>
+          <p class="hero__tagline">Portal for Attendance, Student Overview, and Kinetics</p>
 
           <p class="hero__copy">
             A modern way to manage students, attendance, and classroom records.
