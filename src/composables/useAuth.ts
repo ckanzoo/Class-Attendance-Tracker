@@ -30,13 +30,24 @@ export function initAuth(): Promise<void> {
   if (started) return ready;
   started = true;
 
+  // Mag-timeout pagkalipas ng 1.5s para mag-mount ang UI kahit mag-hang ang Firebase sa iOS
+  const safetyTimeout = setTimeout(() => {
+    if (initializing.value) {
+      console.warn('Firebase auth init timed out, forcing app mount.');
+      initializing.value = false;
+      resolveReady();
+    }
+  }, 1500);
+
   if (!isFirebaseConfigured) {
+    clearTimeout(safetyTimeout);
     initializing.value = false;
     resolveReady();
     return ready;
   }
 
   api.watchAuthState(async (nextUser) => {
+    clearTimeout(safetyTimeout);
     user.value = nextUser;
 
     if (!nextUser) {
@@ -45,7 +56,6 @@ export function initAuth(): Promise<void> {
       try {
         profile.value = await api.getUserProfile(nextUser.uid);
       } catch {
-        // Offline or rules problem - treat as "no profile" rather than crashing.
         profile.value = null;
       }
     }
