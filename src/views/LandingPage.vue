@@ -9,9 +9,8 @@
           </span>
 
           <h1 class="hero__title">
-            Class<br />
-            <span class="hero__title-accent">Trackerbonia</span>
-          </h1>
+  <span class="hero__title-accent">P.A.S.O.K.</span>
+</h1>
 
           <p class="hero__tagline">Portal for Attendance, Student Overview, and Kinetics</p>
 

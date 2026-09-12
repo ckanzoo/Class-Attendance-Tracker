@@ -3,11 +3,6 @@
     <IonHeader>
       <IonToolbar>
         <IonTitle>P.A.S.O.K.</IonTitle>
-        <IonButtons slot="end">
-          <IonButton router-link="/tabs/settings" aria-label="Settings">
-            <IonIcon slot="icon-only" :icon="settingsOutline" />
-          </IonButton>
-        </IonButtons>
       </IonToolbar>
     </IonHeader>
 
@@ -161,7 +156,6 @@ import { computed } from 'vue';
 import { useRouter } from 'vue-router';
 import {
   IonButton,
-  IonButtons,
   IonContent,
   IonHeader,
   IonIcon,
@@ -181,7 +175,6 @@ import {
   documentTextOutline,
   peopleOutline,
   removeCircleOutline,
-  settingsOutline,
   timeOutline,
 } from 'ionicons/icons';
 import AppCard from '@/components/AppCard.vue';
