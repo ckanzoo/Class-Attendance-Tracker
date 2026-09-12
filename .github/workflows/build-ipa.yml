@@ -1,11 +1,11 @@
 name: Build iOS IPA
 
 on:
-  workflow_dispatch: # Pwede mong i-click manually para mag-run
+  workflow_dispatch:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-14
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -21,12 +21,17 @@ jobs:
       - name: Build Web Assets
         run: npm run build
 
+      - name: Setup CocoaPods
+        run: sudo gem install cocoapods
+
       - name: Sync Capacitor iOS
-        run: npx cap sync ios
+        run: |
+          npx cap sync ios || (npx cap add ios && npx cap sync ios)
 
       - name: Build iOS Archive (Unsigned)
         run: |
           cd ios/App
+          pod install
           xcodebuild -workspace App.xcworkspace \
             -scheme App \
             -configuration Release \
